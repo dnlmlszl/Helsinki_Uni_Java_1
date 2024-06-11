@@ -1,0 +1,7 @@
+In a
+world
+In Java, we can get the square, cube,
+and square root of a number using the Math class.
+With the Math.pow() method, we can get
+the cube and square of the number.
+With Math.sqrt(), we can get the square root of the number.
