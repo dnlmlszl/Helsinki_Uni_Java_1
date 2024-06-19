@@ -1,4 +1,4 @@
-package Algorithms.LargerExercises;
+package ProgrammingParadigms.LargerExercises;
 
 import java.util.Scanner;
 

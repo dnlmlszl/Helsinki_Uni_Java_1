@@ -1,0 +1,42 @@
+Pancakes
+15
+Flour
+Milk
+Eggs
+
+Omelette
+10
+Eggs
+Milk
+Cheese
+
+Spaghetti Carbonara
+20
+Spaghetti
+Eggs
+Parmesan cheese
+Bacon
+
+Pancake dough
+60
+Milk
+Eggs
+Flour
+Salt
+Butter
+
+Meatballs
+20
+Ground meat
+Eggs
+Breadcrumbs
+
+Tofu rolls
+30
+Tofu
+Rice
+Water
+Carrot
+Cucumber
+Avocado
+Wasabi
