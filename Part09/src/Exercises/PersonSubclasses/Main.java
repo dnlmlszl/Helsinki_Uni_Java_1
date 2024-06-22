@@ -37,6 +37,18 @@ public class Main {
         System.out.println("\nOllie after some learning: \n");
         System.out.println(line);
         System.out.println(ollie);
+        System.out.println(line);
+
+
+        Person olliePerson = new Student("Ollie", "6381 Hollywood Blvd.", "Los Angeles 90028");
+        System.out.println(olliePerson);
+        System.out.println(line);
+        Object ollieObject = new Student("Ollie", "6381 Hollywood Blvd.", "Los Angeles 90028");
+        System.out.println(ollieObject);
+        System.out.println(line);
+
+        Object alice = new Student("Alice", "177 Stewart Ave.", "Farmington, ME 04938");
+        System.out.println(alice);
 
 
     }
