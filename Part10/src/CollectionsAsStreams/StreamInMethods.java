@@ -1,4 +1,4 @@
-package CollectionsAsStreams.Exercises;
+package CollectionsAsStreams;
 
 import java.util.ArrayList;
 import java.util.List;
