@@ -2,12 +2,9 @@ package org.example.part13.app3;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.Arrays;
@@ -17,33 +14,15 @@ public class JavaFXApplication extends Application {
 
     @Override
     public void start(Stage window) {
+        MenuBar menuBar = new MenuBar();
+        Menu fileMenu = new Menu("File");
+        MenuItem exitMenuItem = new MenuItem("Exit");
+
+        exitMenuItem.setOnAction(event -> window.close());
+        fileMenu.getItems().add(exitMenuItem);
+        menuBar.getMenus().add(fileMenu);
+
         BorderPane layout = new BorderPane();
-
-        HBox buttons = new HBox();
-        buttons.setSpacing(10);
-        Button button1 = new Button("First button");
-        Button button2 = new Button("Second button");
-        Button button3 = new Button("Third button");
-
-        buttons.getChildren().add(button1);
-        button1.setOnAction((event) -> {
-            System.out.println("Button1 Pressed");
-        });
-        buttons.getChildren().add(button2);
-        button2.setOnAction((event) -> {
-            System.out.println("Button2 Pressed");
-        });
-        buttons.getChildren().add(button3);
-        button3.setOnAction((event) -> {
-            System.out.println("Button3 Pressed");
-        });
-
-        VBox texts = new VBox();
-        texts.setSpacing(10);
-        texts.getChildren().add(new Label("First label"));
-        texts.getChildren().add(new Label("Second label"));
-        texts.getChildren().add(new Label("Third label"));
-
 
         Label lettersLabel = new Label("Letters: 0");
         Label wordsLabel = new Label("Words: 0");
@@ -59,8 +38,7 @@ public class JavaFXApplication extends Application {
             updateStatistics(newValue, lettersLabel, wordsLabel, longestWordLabel);
         });
 
-        layout.setTop(buttons);
-        layout.setLeft(texts);
+        layout.setTop(menuBar);
         layout.setBottom(textComponents);
         layout.setCenter(textArea);
 
