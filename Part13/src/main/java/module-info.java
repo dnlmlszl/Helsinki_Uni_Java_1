@@ -37,4 +37,6 @@ module org.example.part13 {
     opens org.example.part13.app11 to javafx.fxml;
     exports org.example.part13.app12;
     opens org.example.part13.app12 to javafx.fxml;
+    exports org.example.part13.app13;
+    opens org.example.part13.app13 to javafx.fxml;
 }
