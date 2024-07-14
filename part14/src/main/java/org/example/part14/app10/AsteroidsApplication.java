@@ -11,17 +11,19 @@ import java.util.*;
 
 public class AsteroidsApplication extends Application {
 
+    public static int WIDTH = 900;
+    public static int HEIGHT = 600;
     static Random random = new Random();
     @Override
     public void start(Stage stage) throws Exception {
         Pane pane = new Pane();
-        pane.setPrefSize(900, 600);
+        pane.setPrefSize(WIDTH, HEIGHT);
 
-        Ship ship = new Ship(150, 100);
+        Ship ship = new Ship(WIDTH / 2, HEIGHT / 2);
         List<Asteroid> asteroids = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
-            Asteroid asteroid = new Asteroid(random.nextInt(100), random.nextInt(100));
+            Asteroid asteroid = new Asteroid(random.nextInt(WIDTH / 3), random.nextInt(HEIGHT / 3));
 
             asteroids.add(asteroid);
         }
