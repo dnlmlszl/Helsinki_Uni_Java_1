@@ -13,8 +13,11 @@ public class AsteroidsApplication extends Application {
         Pane pane = new Pane();
         pane.setPrefSize(900, 600);
 
-        Polygon parallelogram = new Polygon(0, 0, 100, 0, 100, 50, 0, 50);
-        pane.getChildren().add(parallelogram);
+        Polygon ship = new Polygon(-5, -5, 10, 0, -5, 5);
+        ship.setTranslateX(450);
+        ship.setTranslateY(300);
+
+        pane.getChildren().add(ship);
 
         Scene scene = new Scene(pane);
         stage.setTitle("Asteroids!");
