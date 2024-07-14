@@ -16,7 +16,7 @@ public class MiniPaint extends Application {
     @Override
     public void start(Stage stage) {
 
-        Canvas paintingCanvas = new Canvas(640, 480);
+        Canvas paintingCanvas = new Canvas(960, 700);
         GraphicsContext painter = paintingCanvas.getGraphicsContext2D();
 
         ColorPicker colorPalette = new ColorPicker();
