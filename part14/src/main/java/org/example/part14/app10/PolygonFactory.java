@@ -23,12 +23,10 @@ public class PolygonFactory {
                 -1 * size * c2, -1 * size * s2,
                 -1 * size * c2, size * s2,
                 size * c1, size * s1);
-
         for (int i = 0; i < polygon.getPoints().size(); i++) {
             int change = random.nextInt(5) - 2;
             polygon.getPoints().set(i, polygon.getPoints().get(i) + change);
         }
-
         return polygon;
     }
 }

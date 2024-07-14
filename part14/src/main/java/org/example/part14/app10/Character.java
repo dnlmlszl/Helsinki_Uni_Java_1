@@ -8,6 +8,7 @@ public abstract class Character {
 
     private Polygon character;
     private Point2D movement;
+    private boolean alive;
 
     public Character(Polygon polygon, int x, int y) {
         this.character = polygon;
@@ -15,6 +16,13 @@ public abstract class Character {
         this.character.setTranslateY(y);
 
         this.movement = new Point2D(0, 0);
+    }
+
+    public Point2D getMovement() {
+        return this.movement;
+    }
+    public void setMovement(Point2D x) {
+        this.movement = x;
     }
 
     public Polygon getCharacter() {
@@ -64,5 +72,13 @@ public abstract class Character {
         Shape collisionArea = Shape.intersect(this.character, other.getCharacter());
 
         return collisionArea.getBoundsInLocal().getWidth() != -1;
+    }
+
+    public boolean isAlive() {
+        return this.alive;
+    }
+
+    public void setAlive(boolean result) {
+        alive = result;
     }
 }
